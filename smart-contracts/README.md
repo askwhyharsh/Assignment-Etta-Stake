@@ -1,5 +1,7 @@
-Stake: PACK-to-NFT System (Foundry)
+Stake deployed at 0xA6e36606b1c07FCFE0fA26ff3b9DF0653A2A5494  
+https://sepolia.etherscan.io/address/0xa6e36606b1c07fcfe0fa26ff3b9df0653a2a5494
 
+Stake: PACK-to-NFT System (Foundry)
 Overview
 - Contract `Stake` supports:
   - ETH staking → awards credits immediately at a configurable rate (`creditsPerEth`)
