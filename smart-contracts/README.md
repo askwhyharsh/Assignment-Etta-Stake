@@ -1,5 +1,5 @@
-Stake deployed at 0xA6e36606b1c07FCFE0fA26ff3b9DF0653A2A5494  
-https://sepolia.etherscan.io/address/0xa6e36606b1c07fcfe0fa26ff3b9df0653a2a5494
+Stake2 deployed at TTFaLvjMA3m2vgjnw46v6vQaFbodUy7FKC
+https://shasta.tronscan.org/#/address/TTFaLvjMA3m2vgjnw46v6vQaFbodUy7FKC
 
 Stake: PACK-to-NFT System (Foundry)
 Overview
