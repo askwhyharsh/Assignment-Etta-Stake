@@ -48,8 +48,8 @@ export default function Dashboard({ account }: Props) {
       {data && (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <Card title="Your Credits" value={formatNumber(data.credits)} />
-          <Card title="Your Staked (ETH)" value={formatEth(data.userStakedWei)} />
-          <Card title="Total Staked (ETH)" value={formatEth(data.totalStakedWei)} />
+          <Card title="Your Staked (TRX)" value={formatEth(data.userStakedWei)} />
+          <Card title="Total Staked (TRX)" value={formatEth(data.totalStakedWei)} />
           <Card title="Total NFTs" value={formatNumber(data.totalSupply)} />
         </div>
       )}
@@ -79,7 +79,7 @@ function Card({ title, value }: { title: string; value: string }) {
 }
 
 function formatEth(wei: bigint): string {
-  const eth = Number(wei) / 1e18;
+  const eth = Number(wei) / 1e6;
   return eth.toLocaleString(undefined, { maximumFractionDigits: 6 });
 }
 

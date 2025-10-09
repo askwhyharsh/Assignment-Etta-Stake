@@ -1,5 +1,5 @@
 import React from 'react';
-import { connectWallet, getWindowEthereum } from '../lib/eth';
+import { connectTronLink, getWindowTronLink } from '../lib/tron';
 
 type Props = {
   account: string | null;
@@ -9,15 +9,15 @@ type Props = {
 export default function ConnectWallet({ account, setAccount }: Props) {
   const onConnect = async () => {
     try {
-      const addr = await connectWallet();
+      const addr = await connectTronLink();
       setAccount(addr);
     } catch (e: any) {
       alert(e.message ?? String(e));
     }
   };
 
-  const eth = getWindowEthereum();
-  const installed = Boolean(eth);
+  const tronLink = getWindowTronLink();
+  const installed = Boolean(tronLink);
 
   return (
     <div className="flex items-center gap-3">
@@ -31,8 +31,8 @@ export default function ConnectWallet({ account, setAccount }: Props) {
         </button>
       )}
       {!installed && (
-        <a className="text-sm text-blue-600 underline" href="https://metamask.io" target="_blank" rel="noreferrer">
-          Install MetaMask
+        <a className="text-sm text-blue-600 underline" href="https://www.tronlink.org/" target="_blank" rel="noreferrer">
+          Install TronLink
         </a>
       )}
     </div>

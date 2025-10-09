@@ -9,7 +9,6 @@ export default function PackPage({ account }: Props) {
   const [pricePerPack, setPricePerPack] = React.useState<bigint | null>(null);
   const [active, setActive] = React.useState<boolean>(false);
   const [busy, setBusy] = React.useState(false);
-
   React.useEffect(() => {
     (async () => {
       try {
@@ -58,6 +57,6 @@ export default function PackPage({ account }: Props) {
 }
 
 function formatEth(wei: bigint): string {
-  const eth = Number(wei) / 1e18;
+  const eth = Number(wei) / 1e6;
   return eth.toLocaleString(undefined, { maximumFractionDigits: 6 });
 }
